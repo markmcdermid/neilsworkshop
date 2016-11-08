@@ -1,1 +1,41 @@
-<p>This is the partial for view 1.</p>
+<p>I'm a heading for view 1</p>
+
+<p>
+    This is a page with lots of accessibility issues which we can go through below and fix
+</p>
+
+<h1>Example Page</h1>
+
+<form name="registration" class="registration-forM" novalidate action="">
+    <h2 class="registration-heading">Register Now</h2>
+    <div class="input-field">
+        <p>Title</p>
+        <select data-ng-model="v1.formEntry.title">
+            <option>Mr</option>
+            <option>Mrs</option>
+            <option>Miss</option>
+        </select>
+    </div>
+    <div class="input-field">
+        <p>Name</p>
+        <input type="text" data-ng-model="v1.formEntry.name"/>
+    </div>
+    <div class="input-field">
+        <p>Member Type</p>
+        <fieldset>
+            <label for="gold">Gold</label>
+            <input id="gold" type="radio" value="gold" name="memberType" checked/>
+            <label for="silver">Silver</label>
+            <input id="silver" type="radio" value="silver" name="memberType"/>
+            <label for="bronze">Bronze</label>
+            <input id="bronze" type="radio" value="bronze" name="memberType"/>
+        </fieldset>
+    </div>
+    <button type="submit">Submit</button>
+    <button data-ng-click="v1.showModal = true">More info</button>
+</form>
+
+<div data-ng-show="v1.showModal" class="modal">
+    <p>Some text inside a modal.</p>
+    <button data-ng-click="v1.showModal = false">Close modal</button>
+</div>
